@@ -1,0 +1,30 @@
+<%= form_for(member, { url: member_path, method: :post }) do |f| %>
+	<div class="field col-md-7">
+		<%= f.label 'Nome completo' %>
+		<%= f.text_field :name, class: 'form-control', required: 'required',
+		placeholder: 'Digite o nome', autocomplete: 'off' %>
+	</div>
+	<div class="field col-md-5">
+		<%= f.label 'Telefone' %>
+		<%= f.text_field :phone, class: 'form-control', required: 'required',
+		placeholder: 'Digite o telefone', autocomplete: 'off' %>
+	</div>
+	<div class="field col-md-12">
+		<%= f.label 'Genero' %>
+		<%= f.select(:gender, {'Masculino' => 'M', 'Feminino' => 'F'}, 
+		{prompt: 'Selecione o genero'}, {class: 'form-control', required: 'required'}) %>
+	</div>
+	<div class="field col-md-7">
+		<%= f.label 'E-mail' %>
+		<%= f.email_field :email, class: 'form-control', required: 'required',
+		placeholder: 'Digite o e-mail', autocomplete: 'off' %>
+	</div>
+	<div class="field col-md-5">
+		<%= f.label 'Data de nascimento' %>
+		<%= f.date_field :birthdate, class: 'form-control', required: 'required',
+		placeholder: 'Digite a data de nascimento', autocomplete: 'off' %>
+	</div>
+	<div class="actions col-md-12 text-right"><br>
+		<%= f.submit 'INSCREVA-ME', class: 'btn btn-primary btn-lg top' %>
+	</div>
+<% end %>

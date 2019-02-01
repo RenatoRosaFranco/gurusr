@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'bootstrap';
+ @import 'alertify';
+ @import 'alertify/default';
+ @import 'alertify/bootstrap';
+
+ .navbar-default {
+	background-color: #EEE;
+ }
+ 
+ body {
+ 	position: relative;
+ 	font-size: 16px;
+ }
+
+ #presenter {
+ 	position: relative;
+ 	height: 500px;
+ }
+	
+ #member-subscription {
+ 	position: relative;
+
+ 	form {
+ 		input[type=email], input[type=cel], select, 
+ 		input[type=text], input[type=date] {
+		 position: relative;
+ 		 height: 50px;
+ 		}
+ 		input[type=submit] {
+		 position: relative;
+		 width: 210px;
+		 border-radius: 25px;
+		 margin-top: 10px;
+		 padding: 13px;
+ 		}
+ 	}
+ }	
+ #contact {
+ 	margin-top: 50px;
+	margin-bottom: 50px;
+	form {
+	 position: relative;
+	 input[type=text], input[type=email], textarea {
+		height: 44px;
+		border: 2px solid #999;
+		border-radius: 0px;
+	 }
+	 textarea {
+	 	position: relative;
+	 	height: 120px;
+	 }
+	 input[type=submit] {
+	 	border-radius: 25px;
+	 }
+	}
+ } 
+
+ footer {
+ 	margin-bottom: 0px !important;
+ }

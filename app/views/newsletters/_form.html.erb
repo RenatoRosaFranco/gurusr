@@ -1,0 +1,9 @@
+<%= form_for(newsletter, { url: newsletter_path, method: :post }) do |f| %>
+	<div class="field col-md-5 col-md-offset-3">
+		<%= f.email_field :email, class: 'form-control', required: 'required',
+		placeholder: 'Digite o e-mail', autocomplete: 'off', maxlength: 55 %>
+	</div>
+	<div class="actions col-md-4">
+		<%= f.submit 'Inscreva-me', class: 'btn btn-primary btn-lg' %>
+	</div>
+<% end %> 

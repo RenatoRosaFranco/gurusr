@@ -1,0 +1,231 @@
+<% provide :title, 'Home' %>
+
+<section id="presenter" class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12" style="margin-top: 80px;">
+			 	<div class='col-md-7'>
+					<ul class="list-unstyled">
+						<li><h1>GURU-SR</h1></li>
+						<li><p>A comunidade Rubysta de São Roque!</p></li>
+						<li><p>São Roque, São Paulo - SP</p></li>
+					</ul>
+				</div>
+				<div class="col-md-5">
+					<blockquote style="margin-top: 30px;">
+						<h3><strong>LEARN BY DOING.</strong></h3>
+						Nós discutimos, aprendemos e desenvolvemos
+						soluções em forma de código
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="about" style='margin-bottom: 80px;'>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="list-unstyled">
+					<li><h2>SOBRE</h2></li>
+					<li><p>Conheça um pouco sobre a comunidade.</p></li>
+					<li><hr></li>
+				</ul>
+				
+				<div class="col-md-4">
+				 	<div class="text-center">
+				 		<h1><i class='glyphicon glyphicon-search'></i></h1>
+				 		<h3><strong>UNIQUE DESIGN</strong></h3>
+				 		<p>Lorem ipsum dolor sit amet, consecteadipisicing elit, 
+				 		sed do eiusmod teincididuntut laboreet dolore bore et dolore bdolore dolore</p>
+				 	</div>
+				</div>
+				<div class="col-md-4">
+				 	<div class="text-center">
+				 		<h1><i class='glyphicon glyphicon-search'></i></h1>
+				 		<h3><strong>UNIQUE DESIGN</strong></h3>
+				 		<p>Lorem ipsum dolor sit amet, consecteadipisicing elit, 
+				 		sed do eiusmod teincididuntut laboreet dolore bore et dolore bdolore dolore</p>
+				 	</div>
+				</div>
+				<div class="col-md-4">
+				 	<div class="text-center">
+				 		<h1><i class='glyphicon glyphicon-search'></i></h1>
+				 		<h3><strong>UNIQUE DESIGN</strong></h3>
+				 		<p>Lorem ipsum dolor sit amet, consecteadipisicing elit, 
+				 		sed do eiusmod teincididuntut laboreet dolore bore et dolore bdolore dolore</p>
+				 	</div>
+				</div>
+				<div class="col-md-4">
+				 	<div class="text-center">
+				 		<h1><i class='glyphicon glyphicon-search'></i></h1>
+				 		<h3><strong>UNIQUE DESIGN</strong></h3>
+				 		<p>Lorem ipsum dolor sit amet, consecteadipisicing elit, 
+				 		sed do eiusmod teincididuntut laboreet dolore bore et dolore bdolore dolore</p>
+				 	</div>
+				</div>
+				<div class="col-md-4">
+				 	<div class="text-center">
+				 		<h1><i class='glyphicon glyphicon-search'></i></h1>
+				 		<h3><strong>UNIQUE DESIGN</strong></h3>
+				 		<p>Lorem ipsum dolor sit amet, consecteadipisicing elit, 
+				 		sed do eiusmod teincididuntut laboreet dolore bore et dolore bdolore dolore</p>
+				 	</div>
+				</div>
+				<div class="col-md-4">
+				 	<div class="text-center">
+				 		<h1><i class='glyphicon glyphicon-search'></i></h1>
+				 		<h3><strong>UNIQUE DESIGN</strong></h3>
+				 		<p>Lorem ipsum dolor sit amet, consecteadipisicing elit, 
+				 		sed do eiusmod teincididuntut laboreet dolore bore et dolore bdolore dolore</p>
+				 	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="member-subscription" class='jumbotron' 
+	style="margin-top: 50px; margin-bottom: 50px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-5">
+					<h2>FAÇA PARTE!</h2><br>
+					<p>There's a chance you may already know me! A veteran in the PHP 
+					community, I was a co-host on the official Laravel podcast, have 
+					written.</p>
+					
+					<br>
+					<ul class="list-unstyled list-inline">
+						<li><%= link_to 'PERGUNTAS', '', 
+								class: 'btn btn-default btn-lg top' %></li>
+						<li><%= link_to 'COMPARTILHAR', '', 
+								class: 'btn btn-primary btn-lg top' %></li>
+					</ul>
+				</div>
+				<div class="col-md-6 col-md-offset-1">
+					<%= render 'member/form', member: @member %>
+				</div>				
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="sponsor">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2>PATROCINADORES</h2>
+				<p>Conheça nossos patrocinadores.</p>
+				<hr>
+
+				<h3>PATROCINADORES GOLD</h3>
+				<br>
+				<% for i in 1..4 %>
+					<div class="col-md-3">
+						<div class="jumbotron"></div>
+					</div>
+				<% end %>
+
+				<h3>PATROCINADORES SILVER</h3>
+				<br>
+				<% for i in 1..4 %>
+					<div class="col-md-3">
+						<div class="jumbotron"></div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="newsletter" class='jumbotron'>
+	<div class="container">
+		<div class="row">
+			<div class='col-md-12 text-center'>
+				<h2>NEWSLETTER</h2>
+				<p>Inscreva-se em nossa newsletter e mantenha-se informado.</p>
+				<br>
+				
+				<%= content_for :css do %>
+						#newsletter input[type='email']{
+						 height: 55px;
+						 width: 600px;
+						 border-radius: 25px;
+						}
+						#newsletter input[type='submit'] {
+						 margin-left: -266px;
+						 margin-top: 5px;
+						 border-radius: 25px;
+						 text-transform: uppercase;
+						 font-weight: bold;
+						}
+				<% end %>
+
+				<%= render 'newsletters/form', newsletter: @newsletter %>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--
+<section id="blog-faq">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				 <div class="col-md-6">
+				 		<h4><strong>DO NOSSO BLOG</strong></h4>
+				 		<p>Acompanhe as ultimas noticias do blog.</p>
+				 		<hr>
+						
+						<div class='row'>
+				 		<% for i in 1..4 %>
+							<div class="col-md-6" style="margin-bottom: 15px;">
+								<div class="jumbotron" style='height: 130px; margin-bottom: 15px;'></div>
+								<h4>Lorem the first sample question</h4>
+							</div>
+				 		<% end %>
+				 	 </div>
+				 </div>
+				 <div class="col-md-6">
+				 		<h4><strong>PERGUNTAS FREQUENTES</strong></h4>
+				 		<p>Acompanhe as perguntas frequentes do projeto.</p>
+				 		<hr>
+
+				 	 <% for i in 1..3 do %>
+						<div class="col-md-12">
+							<div id='faq-block' style="background-color: #EEE; padding: 20px; margin-bottom: 10px;">
+								<h5><%= i %>  This is the first sample question</h5>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqe 
+								dicta sunt explicabo.</p>
+							</div>
+						</div>
+				 	 <% end %>
+				 </div>
+			</div>
+		</div>
+	</div>
+</section>
+-->
+
+<section id="contact" style="margin-top: 50px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="list-unstyled text-center">
+					<li><h2>ENTRE EM CONTATO</h2></li>
+					<li><p>Envie-nos sua duvida, critica ou sugestão.<br> Acataremos
+					o mais rápido possivel.</p></li>
+					<li><hr></li>
+				</ul>
+				
+				<div class='col-md-8 col-md-offset-2'>
+					<%= render 'contact/form', contact: @contact %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
