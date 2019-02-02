@@ -72,6 +72,16 @@ group :development, :test do
   gem "scrollreveal-rails"
   gem 'newrelic_rpm'
   gem 'public_activity'
+  gem 'active_model_serializers'
+  gem 'activemodel-serializers-xml'
+  gem 'jsonapi-serializers'
+  gem 'clockwork'
+  gem 'google-maps'
+  # gem 'mandrill-api'
+  # gem 'mandrill_mailer'
+  gem 'recaptcha'
+  gem 'yt'
+  gem 'yt-support'
 end
 
 group :development do

@@ -20,7 +20,10 @@ Rails.application.routes.draw do
   # @implemented
   namespace :api do
   	namespace :v1 do
-  		# some routes here
+  		# some routes here in json
   	end
+    namespace :v2 do
+      # some routes here in xml
+    end
   end
 end
